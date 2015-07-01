@@ -8,11 +8,12 @@ exports.getCity = function(req, res, next){
 client = new Client();
  
 // direct way 
-client.get("http://http://192.168.24.16:8081/cds-rest/api/v1/", function(data, response){
+client.get("http://localhost:8080", function(data, response){
             // parsed response body as js object 
             console.log(data);
             // raw response 
-            console.log(response);
+            //console.log(response);
+            res.send(data);
         });
  
 			//console.log(request);
